@@ -4,6 +4,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card } from '@/components/ui/card';
 import { Checkbox } from '@/components/ui/checkbox';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import Icon from '@/components/ui/icon';
 import { useToast } from '@/hooks/use-toast';
 
@@ -188,6 +189,76 @@ export default function Index() {
               </Card>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">Часто задаваемые вопросы</h2>
+          <Accordion type="single" collapsible className="w-full">
+            <AccordionItem value="item-1">
+              <AccordionTrigger className="text-lg font-semibold text-left">
+                Сколько времени займёт внедрение системы продаж?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground">
+                Базовое внедрение занимает 6–8 недель: от аудита до полного запуска системы с регламентами, KPI и обученной командой. Далее идёт сопровождение 1–3 месяца для корректировки процессов и достижения устойчивых результатов.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-2">
+              <AccordionTrigger className="text-lg font-semibold text-left">
+                Работаете онлайн или нужно личное присутствие?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground">
+                95% работы провожу онлайн: встречи, диагностика, обучение команды через видеосвязь. При необходимости возможен выезд в ваш офис для глубокой диагностики или стратегических сессий (обсуждается индивидуально).
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-3">
+              <AccordionTrigger className="text-lg font-semibold text-left">
+                Какова стоимость услуг?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground">
+                Стоимость зависит от масштаба задачи: размера компании, количества менеджеров и текущего состояния продаж. После экспресс-аудита предложу фиксированную цену под ваш проект. Средний диапазон для малого бизнеса — от 300 000 ₽.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-4">
+              <AccordionTrigger className="text-lg font-semibold text-left">
+                Какие гарантии результата вы даёте?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground">
+                Гарантирую создание прозрачной системы с метриками и регламентами. Финальный рост выручки зависит от вашей команды и рынка, но при условии следования процессам клиенты видят прирост 30–60% за 3–6 месяцев. Работаю до результата.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-5">
+              <AccordionTrigger className="text-lg font-semibold text-left">
+                С какими компаниями вы не работаете?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground">
+                Не беру в работу: стартапы без продаж и подтверждённого спроса, компании с выручкой менее 5 млн ₽/год (нет ресурсов для системного отдела), бизнесы, где собственник не готов меняться и внедрять процессы.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-6">
+              <AccordionTrigger className="text-lg font-semibold text-left">
+                Нужно ли увольнять текущих менеджеров?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground">
+                Не обязательно. Сначала оцениваю команду, обучаю новым процессам и скриптам. Если менеджеры не готовы работать системно — помогу с наймом и адаптацией новых. Главное — результат, а не смена людей.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-7">
+              <AccordionTrigger className="text-lg font-semibold text-left">
+                Что если у меня совсем нет отдела продаж?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground">
+                Отлично! Построим отдел с нуля: от найма первых менеджеров до полной системы продаж. Это даже проще, чем переделывать хаос. Создам воронку, регламенты, обучу команду — получите управляемый отдел без «детских болезней».
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
       </section>
 
